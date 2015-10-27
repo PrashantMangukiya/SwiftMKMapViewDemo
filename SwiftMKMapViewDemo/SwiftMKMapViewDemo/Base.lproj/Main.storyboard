@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6gM-cB-CM5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--MKMapView Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftMKMapViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Vm-Pi-yFs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <animations/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMH-T2-1V4">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wRz-LZ-Z82"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="ZoomIn" id="RLk-Z3-oao"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FB1-Cq-CFU"/>
+                                    <barButtonItem image="ZoomOut" id="wvb-2L-W3Z"/>
+                                </items>
+                            </toolbar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BrD-4u-BKw">
+                                <rect key="frame" x="20" y="72" width="280" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="gEH-TT-riD"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="mapTypeValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Az5-qB-UwQ"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Vm-Pi-yFs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2sA-Qs-OU4"/>
+                            <constraint firstItem="BrD-4u-BKw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4sq-cN-hbA"/>
+                            <constraint firstItem="2Vm-Pi-yFs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Xj-lG-dKs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nMH-T2-1V4" secondAttribute="bottom" id="EZA-mM-6yW"/>
+                            <constraint firstItem="nMH-T2-1V4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GUf-w8-2hj"/>
+                            <constraint firstItem="BrD-4u-BKw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="aXb-1L-Tct"/>
+                            <constraint firstAttribute="trailing" secondItem="nMH-T2-1V4" secondAttribute="trailing" id="c1L-1u-3H6"/>
+                            <constraint firstAttribute="trailing" secondItem="2Vm-Pi-yFs" secondAttribute="trailing" id="cEB-F5-kIU"/>
+                            <constraint firstAttribute="trailing" secondItem="BrD-4u-BKw" secondAttribute="trailing" constant="20" id="hNI-pq-lkd"/>
+                            <constraint firstItem="nMH-T2-1V4" firstAttribute="top" secondItem="2Vm-Pi-yFs" secondAttribute="bottom" id="wEh-KA-C04"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MKMapView Demo" id="EAg-lw-RjF">
+                        <barButtonItem key="rightBarButtonItem" image="LocationPin" id="jZU-OR-Shc"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mapType" destination="BrD-4u-BKw" id="AbD-6f-wzc"/>
+                        <outlet property="myMapView" destination="2Vm-Pi-yFs" id="bfN-48-m9S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="367"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RZX-Ao-jU2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6gM-cB-CM5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cwr-1A-MeA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TNI-yI-uXz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpx-S2-K4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LocationPin" width="16" height="22"/>
+        <image name="ZoomIn" width="22" height="22"/>
+        <image name="ZoomOut" width="22" height="22"/>
+    </resources>
+</document>
