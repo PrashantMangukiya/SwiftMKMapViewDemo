@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6A18D11BE08FA000A451C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6A18D01BE08FA000A451C5 /* CoreLocation.framework */; };
 		8F6CAB8E1BDCC65B00B8F9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAB8D1BDCC65B00B8F9DA /* AppDelegate.swift */; };
 		8F6CAB901BDCC65B00B8F9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6CAB8F1BDCC65B00B8F9DA /* ViewController.swift */; };
 		8F6CAB931BDCC65B00B8F9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CAB911BDCC65B00B8F9DA /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F6A18D01BE08FA000A451C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8F6CAB8A1BDCC65B00B8F9DA /* SwiftMKMapViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMKMapViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6CAB8D1BDCC65B00B8F9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F6CAB8F1BDCC65B00B8F9DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6A18D11BE08FA000A451C5 /* CoreLocation.framework in Frameworks */,
 				8F6CABA01BDCC7E500B8F9DA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +44,7 @@
 		8F6CAB811BDCC65B00B8F9DA = {
 			isa = PBXGroup;
 			children = (
+				8F6A18D01BE08FA000A451C5 /* CoreLocation.framework */,
 				8F6CAB9F1BDCC7E400B8F9DA /* MapKit.framework */,
 				8F6CAB8C1BDCC65B00B8F9DA /* SwiftMKMapViewDemo */,
 				8F6CAB8B1BDCC65B00B8F9DA /* Products */,
@@ -290,6 +294,7 @@
 				8F6CAB9E1BDCC65B00B8F9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

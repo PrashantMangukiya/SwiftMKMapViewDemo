@@ -28,9 +28,17 @@
                                     <constraint firstAttribute="height" constant="44" id="wRz-LZ-Z82"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem image="ZoomIn" id="RLk-Z3-oao"/>
+                                    <barButtonItem image="ZoomIn" id="RLk-Z3-oao">
+                                        <connections>
+                                            <action selector="zoomInButtonAction:" destination="BYZ-38-t0r" id="ak5-SV-V4e"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FB1-Cq-CFU"/>
-                                    <barButtonItem image="ZoomOut" id="wvb-2L-W3Z"/>
+                                    <barButtonItem image="ZoomOut" id="wvb-2L-W3Z">
+                                        <connections>
+                                            <action selector="zoomOutButtonAction:" destination="BYZ-38-t0r" id="BaU-EM-ooa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BrD-4u-BKw">
@@ -66,12 +74,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MKMapView Demo" id="EAg-lw-RjF">
-                        <barButtonItem key="rightBarButtonItem" image="LocationPin" id="jZU-OR-Shc"/>
+                        <barButtonItem key="rightBarButtonItem" image="LocationPin" id="jZU-OR-Shc">
+                            <connections>
+                                <action selector="userLocationButtonAction:" destination="BYZ-38-t0r" id="6Q6-GH-Qb3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="mapType" destination="BrD-4u-BKw" id="AbD-6f-wzc"/>
                         <outlet property="myMapView" destination="2Vm-Pi-yFs" id="bfN-48-m9S"/>
+                        <outlet property="zoomInButton" destination="RLk-Z3-oao" id="BQO-cZ-6FQ"/>
+                        <outlet property="zoomOutButton" destination="wvb-2L-W3Z" id="s4u-Mf-wHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
