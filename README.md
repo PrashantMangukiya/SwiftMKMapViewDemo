@@ -22,7 +22,7 @@ Swift based demo that shows map functionality within iOS application. It uses ``
 ## Supported Device
 iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
 
-## Technology used
+## Technology Used
 + Map Component ``MKMapView``.
 + Map library ``MapKit``.
 + Change map type using ``UISegmentedControl``
@@ -31,6 +31,34 @@ iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
 + Build with Xcode storyboard.
 + Adaptive layout for major screen size support.
 + Created with ``Swift 2``, ``Xcode 7``, ``iOS 9``.
+
+## How To Ask For Location Permission
+For detecting user location below steps should be followed.
+
++ Do ``import CoreLocation`` within view controller. 
++ Add permission key/value pair within ``info.plist`` file.
++ Ask for location permission within ``viewDidLoad()``. 
++ Once permission granted, you can access location anytime.
+
+Add permission key (type string) within ``info.plist`` file.
+<pre>
+Key:  NSLocationWhenInUseUsageDescription
+Value: Like to know your current location.
+</pre>
+
+Add below code within ``viewDidLoad()`` for asking location permission.
+<pre>
+override func viewDidLoad() {
+  super.viewDidLoad()
+  
+  //...
+  
+  // request location access permission from user.
+  self.locationManager.requestWhenInUseAuthorization()
+
+  //---
+}
+</pre>
 
 ## Screenshots
 
@@ -42,4 +70,3 @@ iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
 
 ## License
 SwiftMKMapViewDemo is available under the MIT license. See the LICENSE file for more info.
-
