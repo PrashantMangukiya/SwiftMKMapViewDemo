@@ -1,5 +1,5 @@
-# SwiftMKMapViewDemo
-MKMapView based demo application build using Swift 2, Xcode 7, and iOS 9
+# MKMapView Demo In Swift
+MKMapView based demo application build using Swift 2, Xcode 7, and iOS 9.
 
 ## Overview
 Swift based demo that shows map functionality within iOS application. It uses ``MKMapView`` component to display map and ``MapKit`` for various map functionality. You can use this application as a base for any ``Map Based`` iOS project and expand it. It's free for personal or commercial use.
@@ -25,22 +25,22 @@ iPhone 4s, 5, 5s, 5c, 6, 6 Plus, 6s, 6s Plus, all iPad having iOS 9.
 ## Technology Used
 + Map Component ``MKMapView``.
 + Map library ``MapKit``.
-+ Change map type using ``UISegmentedControl``
-+ Access user location using ``CoreLcoation`` 
++ Change map type using ``UISegmentedControl``.
++ Access user location using ``CoreLocation``.
 + Simple and Clean interface.
 + Build with Xcode storyboard.
 + Adaptive layout for major screen size support.
 + Created with ``Swift 2``, ``Xcode 7``, ``iOS 9``.
 
 ## How To Ask For Location Permission
-For detecting user location below steps should be followed.
+For detecting user location below steps should be followed within your application. This help provided for general understanding those who are new to ``MapKit`.
 
-+ Do ``import CoreLocation`` within view controller. 
-+ Add permission key/value pair within ``info.plist`` file.
++ Import core location within viewController (e.g. ``import CoreLocation``). 
++ Add permission (key/value pair) within ``info.plist`` file.
 + Ask for location permission within ``viewDidLoad()``. 
-+ Once permission granted, you can access location anytime.
++ Once permission granted, you can access location within your code.
 
-Add permission key (type string) within ``info.plist`` file.
+Add permission key/value pair (string type) within ``info.plist`` file.
 <pre>
 Key:  NSLocationWhenInUseUsageDescription
 Value: Like to know your current location.
